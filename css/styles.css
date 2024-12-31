@@ -201,6 +201,14 @@ body img {
   margin-right: -100px;
 }
 
+.hero-content {
+  transition: transform 0.8s ease;
+}
+
+.hero-content:hover {
+  transform: scale(0.9);
+}
+
 .topics {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -227,6 +235,30 @@ body img {
   margin: 0 auto 2rem;
 }
 
+.grid-1 {
+  animation: animation1 5s ease;
+}
+
+@keyframes animation1 {
+  0% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.grid-2 {
+  animation: animation2 5s ease;
+}
+
+@keyframes animation2 {
+  0% {
+    transform: translateX(200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 .chapter-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -241,6 +273,38 @@ body img {
   font-size: 1.25rem;
   font-weight: 700;
   margin: 1rem 0;
+}
+
+.card {
+  transition: transform 0.7s ease;
+}
+
+.card:hover {
+  transform: scale(0.9);
+}
+
+.chapter-1 {
+  transition: transform 0.7s ease;
+}
+
+.chapter-1:hover {
+  transform: rotate(90deg);
+}
+
+.chapter-2 {
+  transition: transform 0.7s ease;
+}
+
+.chapter-2:hover {
+  transform: rotate(180deg);
+}
+
+.chapter-3 {
+  transition: transform 0.7s ease;
+}
+
+.chapter-3:hover {
+  transform: rotate(360deg);
 }
 
 .summary {
@@ -314,6 +378,14 @@ body img {
 }
 .takeaways .takeaways-cards .card i {
   padding-right: 2rem;
+}
+
+.animate1 {
+  transition: transform 0.5s ease;
+}
+
+.animate1:hover {
+  transform: rotate(360deg);
 }
 
 .social {
