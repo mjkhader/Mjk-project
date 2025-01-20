@@ -19,10 +19,22 @@ document.addEventListener('DOMContentLoaded', function () {
     localStorage.setItem('darkmode', null);
   };
 
-  if(darkmode === 'active') enableDarkMode()
+  if (darkmode === 'active') enableDarkMode();
 
   themeSwitch.addEventListener('click', () => {
-    darkmode =localStorage.getItem('darkmode')
+    darkmode = localStorage.getItem('darkmode');
     darkmode !== 'active' ? enableDarkMode() : disableDarkMode();
+  });
+
+  const container = document.getElementById('containerLogin');
+  const overlayCon = document.getElementById('overlayCon');
+  const overlayBtn = document.getElementById('overlayBtn');
+
+  overlayBtn.addEventListener('click', () => {
+    container.classList.toggle('right-panel-active');
+    container.classList.remove('btnScaled');
+    window.requestAnimationFrame(() => {
+      overlayCon.classList.add('btnScaled');
+    });
   });
 });
